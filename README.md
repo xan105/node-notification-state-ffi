@@ -23,7 +23,7 @@ console.log(state);
 
 You can use this to easily know if an application is currently running in fullscreen (_main monitor_):
 
-```
+```js
 import { isFullscreenAppRunning } from 'notification-state-ffi';
 
 if (isFullscreenAppRunning()){
@@ -38,7 +38,7 @@ Installation
 npm install notification-state-ffi
 ```
 
-_Prerequisite: C/C++ build tools (Visual Studio) and Python 3.x (node-gyp) in order to build [node-ffi-napi](https://www.npmjs.com/package/ffi-napi)._
+_Prerequisite: C/C++ build tools (Visual Studio) and Python 3.x (node-gyp) in order to build [node-ffi-napi](https://www.npmjs.com/package/ffi-napi)._<br/>
 _💡 Prebuilt binaries are provided so in most cases the above mentioned prerequisites aren't needed._
 
 API
