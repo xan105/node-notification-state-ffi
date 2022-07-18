@@ -1,0 +1,52 @@
+{
+  "name": "notification-state-ffi",
+  "version": "1.0.0",
+  "description": "SHQueryUserNotificationState FFI wrapper: determine whether sending a notification is appropriate",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./promises": {
+      "types": "./types/promises.d.ts",
+      "default": "./lib/promises.js"
+    }
+  },
+  "types": "./types/index.d.ts",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "lint": "npx eslint --ignore-path .gitignore \"./**/*.{js,mjs}\""
+  },
+  "keywords": [
+    "windows",
+    "SHQueryUserNotificationState",
+    "QUERY_USER_NOTIFICATION_STATE",
+    "isFullscreenAppRunning",
+    "ffi"
+  ],
+  "author": {
+    "name": "Anthony Beaumont",
+    "email": "dev.xan105@outlook.be",
+    "url": "https://xan105.com/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xan105/node-notification-state-ffi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xan105/node-notification-state-ffi/issues"
+  },
+  "homepage": "https://github.com/xan105/node-notification-state-ffi#readme",
+  "dependencies": {
+    "@xan105/error": "^1.3.3",
+    "@xan105/is": "^2.5.2",
+    "ffi-napi": "^4.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0"
+  }
+}
