@@ -71,7 +71,18 @@ If you want the raw data only set it to false.
 
 Return value:
 
-✔️ If this function succeeds, it returns [QUERY_USER_NOTIFICATION_STATE](https://docs.microsoft.com/en-us/windows/win32/api/shellapi/ne-shellapi-query_user_notification_state).<br/>
+✔️ If this function succeeds, it returns [QUERY_USER_NOTIFICATION_STATE](https://docs.microsoft.com/en-us/windows/win32/api/shellapi/ne-shellapi-query_user_notification_state):<br/>
+
+```
+QUNS_NOT_PRESENT (1): A screen saver is displayed, the machine is locked, or a nonactive Fast User Switching session is in progress
+QUNS_BUSY"(2): A fullscreen application is running or Presentation Settings are applied
+QUNS_RUNNING_D3D_FULL_SCREEN(3): A fullscreen (exclusive mode) Direct3D application is running
+QUNS_PRESENTATION_MODE(4): The user has activated Windows presentation settings to block notifications and pop-up messages
+QUNS_ACCEPTS_NOTIFICATIONS(5): None of the other states are found, notifications can be freely sent
+QUNS_QUIET_TIME(6): The current user is in 'quiet time', which is the first hour after a new user logs into his or her account for the first time after an operating system upgrade or clean installation
+QUNS_APP(7): A Windows Store app is running fullscreen
+```
+
 ❌ Otherwise, it throws with the corresponding HRESULT error code.
 
 Example:
