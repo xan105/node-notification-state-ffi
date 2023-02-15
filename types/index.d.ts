@@ -1,8 +1,7 @@
-declare interface IOption {
+declare interface Option {
   translate?: boolean,
 }
 
-export function queryUserNotificationState(option?: IOption): number | string
-export function isFullscreenAppRunning(): boolean
-
-export * as promises from "./promises.d.ts"
+export function queryUserNotificationState(option?: Option): Promise<number | string>
+export function isFullscreenAppRunning(): Promise<boolean>
+export function queryFocusAssistState(option?: Option): Promise<number | string>
