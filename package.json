@@ -1,7 +1,7 @@
 {
   "name": "notification-state-ffi",
-  "version": "1.0.0",
-  "description": "SHQueryUserNotificationState FFI wrapper: determine whether sending a notification is appropriate",
+  "version": "1.1.0",
+  "description": "Determine whether sending a notification is appropriate",
   "type": "module",
   "exports": {
     ".": {
@@ -56,7 +56,7 @@
   "dependencies": {
     "@xan105/error": "^1.5.0",
     "@xan105/ffi": "^0.2.0",
-    "@xan105/is": "^2.5.2",
+    "@xan105/is": "^2.8.0",
     "koffi": "^2.3.4"
   },
   "devDependencies": {
