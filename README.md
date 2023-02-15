@@ -37,7 +37,7 @@ Focus assist / quiet hours
 ```js
 import { queryFocusAssistState } from "notification-state-ffi";
 
-const state = await queryFocusAssistState();
+const state = await queryFocusAssistState({translate: true});
 console.log(state);
 //PRIORITY_ONLY
 ```
@@ -48,9 +48,6 @@ Installation
 ```
 npm install notification-state-ffi
 ```
-
-_Prerequisite: C/C++ build tools (Visual Studio) and Python 3.x (node-gyp) in order to build [node-ffi-napi](https://www.npmjs.com/package/ffi-napi)._<br/>
-_💡 Prebuilt binaries are provided so in most cases the above mentioned prerequisites aren't needed._
 
 API
 ===
@@ -90,3 +87,29 @@ Return value:
 
 ✔️ Returns whether an application is currently running in fullscreen.<br/>
 If `queryUserNotificationState()` fails then `false` is assumed.
+
+### `queryFocusAssistState(option?: object): Promise<number | string`>
+
+Get the current state of "Focus Assist" / "Quiet Hours".
+
+> ⚠ WNF (Windows Notification Facility) is an undocumented Windows API !
+> This API can change/break at any time in the future.
+
+⚙️ Options:
+
+- translate?: boolean (true)
+
+When a value is known it will be 'translated' to its string equivalent value otherwise its integer value.<br/>
+If you want the raw data only set it to false.
+
+Return value:
+
+✔️ If this function succeeds, it returns the current state.<br/>
+❌ Otherwise, it throws with the corresponding NTSTATUS error code.
+
+Example:
+
+```js
+queryFocusAssistState({translate: true}) //PRIORITY_ONLY (string)
+queryFocusAssistState({translate: false}) //1 (number)
+```
