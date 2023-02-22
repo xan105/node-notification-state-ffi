@@ -1,6 +1,6 @@
 {
   "name": "notification-state-ffi",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Determine whether sending a notification is appropriate",
   "type": "module",
   "exports": {
@@ -54,9 +54,9 @@
     }
   ],
   "dependencies": {
-    "@xan105/error": "^1.5.0",
-    "@xan105/ffi": "^0.3.0",
-    "@xan105/is": "^2.8.0",
+    "@xan105/error": "^1.6.0",
+    "@xan105/ffi": "^0.4.1",
+    "@xan105/is": "^2.8.1",
     "koffi": "^2.3.4"
   },
   "devDependencies": {
