@@ -42,7 +42,7 @@ console.log(state);
 //PRIORITY_ONLY
 ```
 
-Disable / enable focus assist programatically
+Disable / enable focus assist
 
 ```js
 import { focusAssist } from "notification-state-ffi";
