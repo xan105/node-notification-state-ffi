@@ -14,14 +14,18 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "lint": "npx eslint --ignore-path .gitignore \"./**/*.{js,mjs}\""
+    "lint": "eslint \"./lib/**/*.{js,mjs}\" \"./types/**/*.d.ts\"",
+    "check": "tsc --noemit --checkjs",
+    "declare": "tsc --declaration --emitDeclarationOnly --outDir \"./types\""
   },
   "keywords": [
     "SHQueryUserNotificationState",
     "NtQueryWnfStateData",
+    "ZwUpdateWnfStateData",
     "WNF",
     "ntdll",
     "shell32",
+    "focus",
     "ffi",
     "windows"
   ],
@@ -55,11 +59,15 @@
   ],
   "dependencies": {
     "@xan105/error": "^1.6.0",
-    "@xan105/ffi": "^0.5.0",
+    "@xan105/ffi": "^0.7.0",
     "@xan105/is": "^2.8.1",
-    "koffi": "^2.3.9"
+    "koffi": "^2.3.14"
   },
   "devDependencies": {
-    "eslint": "^8.34.0"
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0",
+    "typescript": "^5.0.3"
   }
 }
