@@ -11,13 +11,13 @@ Example
 ```js
 import { queryUserNotificationState } from "notification-state-ffi";
 
-const state = queryUserNotificationState();
+const state = await queryUserNotificationState();
 console.log(state); 
 //QUNS_ACCEPTS_NOTIFICATIONS (notifications can be freely sent) 
 
 //If you prefer the raw data instead:
 
-const state = queryUserNotificationState({translate: false});
+const state = await queryUserNotificationState({translate: false});
 console.log(state); 
 //5 (notifications can be freely sent)
 ```
@@ -27,7 +27,7 @@ You can use `queryUserNotificationState()` to easily know if an application is c
 ```js
 import { isFullscreenAppRunning } from "notification-state-ffi";
 
-if (isFullscreenAppRunning()){
+if (await isFullscreenAppRunning()){
   //Do something
 }
 ```
